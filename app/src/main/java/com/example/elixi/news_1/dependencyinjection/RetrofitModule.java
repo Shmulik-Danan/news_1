@@ -1,7 +1,6 @@
 package com.example.elixi.news_1.dependencyinjection;
 
 import android.app.Application;
-import android.arch.lifecycle.ViewModel;
 
 import com.example.elixi.news_1.services.APIService;
 import com.example.elixi.news_1.services.RetrofitRepository;
@@ -19,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
 public class RetrofitModule {
-    private final APIService gitHubService;
+    private APIService gitHubService;
 
 
     public RetrofitModule() {
@@ -28,7 +27,9 @@ public class RetrofitModule {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(APIService.class);
+
     }
+
 
     @Provides
     @Singleton
