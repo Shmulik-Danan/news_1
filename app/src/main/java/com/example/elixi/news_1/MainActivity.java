@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onChanged(@Nullable ArrayList<Articles> articles) {
-                if (articles != null && articles != articlesArrayList) {
+                if (articles != null ) {
                     mainActivityViewModel.set(articles);
 
                     Log.d(TAG, "articles: " + articles);
@@ -97,7 +97,11 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-                else Log.d(TAG, "subscribeRetrofit: Something went wrong with the Retrofit connection");
+                else{
+                    Log.d(TAG, "subscribeRetrofit: Something went wrong with the Retrofit connection");
+                    Log.d(TAG, "articles: " + articles);
+                    Log.d(TAG, "rrayList: " + articlesArrayList);
+                }
             }
         };
         mainActivityViewModel.getArticlesListObservable().observe(this, articles);

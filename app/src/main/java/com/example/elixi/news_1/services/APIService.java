@@ -8,12 +8,16 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 public interface APIService {
     String HTTPS_API_GITHUB_URL = "https://newsapi.org/v2/";
 
-    @GET("{GET}")
-    Call<SearchResult> get(@Path("GET") String GET, @Query("apiKey") String apiKey, @Query("sources") String sources,
-                           @Query("language") String language);
+    //@GET("{GET}")
+    //Call<SearchResult> get(@Path("GET") String GET, @Query("apiKey") String apiKey, @Query("sources") String sources,
+     //                      @Query("language") String language);
+
+    @GET
+    Call<SearchResult> get(@Url String url);
 
     }

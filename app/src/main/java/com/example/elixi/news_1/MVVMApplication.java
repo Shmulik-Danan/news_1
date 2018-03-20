@@ -7,7 +7,6 @@ import com.example.elixi.news_1.dependencyinjection.ApplicationComponent;
 import com.example.elixi.news_1.dependencyinjection.ApplicationModule;
 import com.example.elixi.news_1.dependencyinjection.DaggerApplicationComponent;
 import com.example.elixi.news_1.dependencyinjection.RetrofitModule;
-import com.example.elixi.news_1.dependencyinjection.RoomModule;
 
 import static android.content.ContentValues.TAG;
 

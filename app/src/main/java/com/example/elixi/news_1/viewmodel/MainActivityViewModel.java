@@ -46,7 +46,9 @@ public class MainActivityViewModel extends ViewModel{
 
 
     public LiveData<ArrayList<Articles>> getArticlesListObservable() {
-        return ArticlesListObservable;
+        return this.retrofitRepository.get("top-headlines","d6c8fed938d34d42860ff2376b4dcdbe"
+                ,"google-news-is","");
+       // return ArticlesListObservable;
     }
 
     public LiveData<List<Articles>> getListItemsObservable() {
